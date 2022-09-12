@@ -9,9 +9,9 @@ This project is a basic Discord bot used for a small group of indecisive friends
 * Currently, I am the only one able to invite the bot to servers
 
 ### Features
-* Given certain text commands, the bot can:
-  * ^decide: decides on a random item from a pre-populated list of items, in this case games
-  * ^pick(a,b,c, ...): decides on a random item from the given inputs, separated by commas
-  * ^random(a,b): selects a random number between a and b (or 0 and a if b is not provided)
-  * ^order(a,b,c, ...): returns a random ordering of the given items, separated by commas
-  * ^help: lists out all commands
+Given certain text commands, the bot can:
+* ^decide: decides on a random item from a pre-populated list of items, in this case games
+* ^pick(a,b,c, ...): decides on a random item from the given inputs, separated by commas
+* ^random(a,b): selects a random number between a and b (or 0 and a if b is not provided)
+* ^order(a,b,c, ...): returns a random ordering of the given items, separated by commas
+* ^help: lists out all commands
