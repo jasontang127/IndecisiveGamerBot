@@ -2,7 +2,7 @@ import random
 
 import discord
 
-token = "OTk1ODYyNjc3Mzc5MzcxMDE5.GZUWyV.aLcKMQO5gvclvf6iHKyQ4TCIwmxEFdYUi0toiA"
+token = "blah"
 
 client = discord.Client()
 
@@ -22,9 +22,9 @@ async def on_message(message):
     if message.author == client.user:
         return
     elif user_message.lower() == "^decide":
-        num = random.randrange(0, 5, 1)
-        games = ["League of Legussy", "Valussy", "Fall Gussy", "Overcussy(2)", "Unrussy",
-                 "nothing; be productivussy"]
+        games = ["League", "Valorant", "Fall Guys", "For the King",
+                 "nothing; be productive"]
+        num = random.randrange(0, len(games), 1)
         await message.channel.send(f"Foolish indecisive gamers, you will be playing " + games[num] + "!!!")
         return
     elif user_message.lower()[0:5] == "^pick":
@@ -53,11 +53,11 @@ async def on_message(message):
         else:
             messageStr += str(random.randrange(int(bounds[0]), int(bounds[1]))) + "ussy"
         await message.channel.send(messageStr)
-        return;
+        return
     elif user_message.lower() == "^help":
         await message.channel.send(
-            f"Foolish indecisive gamers, here are my commandussys:\n- ^decide: Selects from a set list of games\n- ^pick (a, b, c): Selects from given parameters (separate with commas)\n- ^random (a,b): Selects a random number between a and b (or 0 and a if b not given)'\n- ^order (a,b,c): Returns a random ordering of given items (separate with commas)")
-        return;
+            f"Foolish indecisive gamers, here are my commands:\n- ^decide: Selects from a set list of games\n- ^pick (a, b, c): Selects from given parameters (separate with commas)\n- ^random (a,b): Selects a random number between a and b (or 0 and a if b not given)'\n- ^order (a,b,c): Returns a random ordering of given items (separate with commas)")
+        return
 
 
-client.run(token);
+client.run(token)
